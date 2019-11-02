@@ -1,11 +1,26 @@
-#Ini Variabel & Nilai
+ #!/usr/bin/python3
+nama = input("Masukkan nama:")
+uts = input("Masukkan nilai UTS:")
+uas = input("Masukan nilai UAS:")
+tugas = input("masukan nilai Tugas:")
 
-namalengkap = "Anastasya Br Ginting"
-namapanggilan = "Tasya"
-npm = "311910528"
-tempatlahir = "Kutatengah"
-umur = "19"
-telf = "081262105482"
-alamat = "Bekasi"
+akhir = (int(tugas) * .2) + (int(uts) * .4) + (int(uas) * .4)
+keterangan = ("TIDAK LULUS", "LULUS")[akhir > 60.0]
+if akhir > 80:
+    huruf = "A"
+elif akhir > 70:
+    huruf = "B"
+elif akhir > 50:
+    huruf = "C"
+elif akhir > 40:
+    huruf = "D"
+else:
+    hurif = "E"
 
-print("assalamualaikum, \n let me introduce my self, My name is",namalengkap,",but you call me",namapanggilan,".My NPM is",npm,". I was born in",tempatlahir,"and i am",umur,"years old. I am very glad if you want to invite my house in",alamat,". So, dont't forget to call me before with the number",telf,"\n Thank You")
+print("\nNama        :",nama)
+print("Nilai UTS     :",uts)
+print("Nilai UAS     :",uas)
+print("Nilai Tugas   :",tugas)
+print("Nilai Akhir   :",akhir)
+print("\nNilai huruf :",huruf)
+print("keterengan    :",keterangan)
